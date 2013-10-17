@@ -21,5 +21,5 @@ $config = array(
 						          'label'   => 'email', 
 						          'rules'   => 'required|email'
 						        )
-			   			),          
+			   			)          
 				);
