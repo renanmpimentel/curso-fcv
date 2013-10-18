@@ -1,7 +1,7 @@
 <div class="container">
 	<?php 
 		echo form_open(''); 
-		echo form_fieldset('Cadastro');
+		echo form_fieldset('Cadastro Palestrante');
 	?>
 	<div class="row-fluid">
 		<div class="span6">
