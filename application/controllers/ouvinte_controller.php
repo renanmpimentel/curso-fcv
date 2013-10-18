@@ -9,6 +9,8 @@ class ouvinte_controller extends CI_Controller {
 
 	public function index()
 	{
+		$data['title'] = 'Unicesumar';
+		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
 		$this->load->view('ouvinte_view', $data);
