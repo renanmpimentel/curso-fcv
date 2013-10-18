@@ -17,40 +17,47 @@ class Palestrante_Controller extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function listarPalestrantes()
-	{
-		$data['title'] = 'Unicesumar';
-
-		$this->load->view('template/header', $data);
-		$this->load->view('template/menu', $data);
-		$this->load->view('template/footer');
-	}
-
 	public function cadastrarPalestrante()
 	{
 		$data['title'] = 'Unicesumar';
 
-		$this->load->view('template/header', $data);
-		$this->load->view('template/menu', $data);
-		$this->load->view('template/footer');
+		$this->form_validation->config_rules = array();
+        $this->form_validation->error_array = array();
+        $this->form_validation->set_rules( $this->config->item('palestrante') );
+
+        if ($this->form_validation->run() == FALSE) {
+
+			$this->load->view('template/header', $data);
+			$this->load->view('template/menu', $data);
+			$this->load->view('cadastrarPalestrante_view', $data);
+			$this->load->view('template/footer');
+		} else {
+			//TODO
+		}
 	}
 
 	public function editarPalestrante()
 	{
 		$data['title'] = 'Unicesumar';
 
-		$this->load->view('template/header', $data);
-		$this->load->view('template/menu', $data);
-		$this->load->view('template/footer');
+		$this->form_validation->config_rules = array();
+        $this->form_validation->error_array = array();
+        $this->form_validation->set_rules( $this->config->item('palestrante') );
+
+        if ($this->form_validation->run() == FALSE) {
+
+			$this->load->view('template/header', $data);
+			$this->load->view('template/menu', $data);
+			$this->load->view('cadastrarPalestrante_view', $data);
+			$this->load->view('template/footer');
+		} else {
+			//TODO
+		}
 	}
 
 	public function excluirPalestrante()
 	{
-		$data['title'] = 'Unicesumar';
-
-		$this->load->view('template/header', $data);
-		$this->load->view('template/menu', $data);
-		$this->load->view('template/footer');
+		//TODO
 	}
 }
 
