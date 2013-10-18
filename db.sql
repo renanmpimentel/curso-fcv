@@ -19,3 +19,7 @@ CREATE TABLE `banco`.`ouvinte` (
   `observacao` TEXT NULL,
   `data_cadastro` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`));
+
+
+--
+INSERT INTO `banco`.`ouvinte` (`nome`, `email`, `cidade`, `estado`, `telefone`, `observacao`) VALUES ('Nome Primeiro', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma');
