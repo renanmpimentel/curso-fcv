@@ -5,11 +5,15 @@ class ouvinte_controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+		
+		$this->load->model('ouvinte_model');
 	}
 
 	public function index()
 	{
 		$data['title'] = 'Unicesumar';
+
+		$data['ouvintes'] = $this->ouvinte_model->listarTodos();
 		
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
