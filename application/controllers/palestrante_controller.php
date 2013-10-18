@@ -13,6 +13,7 @@ class Palestrante_Controller extends CI_Controller {
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);
+		$this->load->view('palestrante_view', $data);
 		$this->load->view('template/footer');
 	}
 
