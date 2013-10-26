@@ -5,11 +5,14 @@ class index_controller extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+
+		if(!$this->session->userdata('usuario'))
+			redirect('/');
 	}
 
 	public function index()
 	{
-		$data['title'] = 'Unicesumar';
+		$data['title'] = 'FCV - Curso de Codeigniter com Twitter Bootstrap';
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/menu', $data);

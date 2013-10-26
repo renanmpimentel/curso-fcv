@@ -20,6 +20,22 @@ CREATE TABLE `banco`.`ouvinte` (
   `data_cadastro` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`));
 
+CREATE TABLE `banco`.`usuario` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `usuario` VARCHAR(45) NULL,
+  `senha` VARCHAR(40) NULL,
+  `data_cadastro` TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`));
+
+-- 
+INSERT INTO `banco`.`ouvinte` (`nome`, `email`, `cidade`, `estado`, `telefone`, `observacao`) VALUES 
+('Nome Primeiro', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Segundo', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Terceiro', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Quarto', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Quinto', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Sexto', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma'),
+('Nome Setimo', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma');
 
 --
-INSERT INTO `banco`.`ouvinte` (`nome`, `email`, `cidade`, `estado`, `telefone`, `observacao`) VALUES ('Nome Primeiro', 'email@email.com.br', 'cidade', 'uf', '(00) 0000-0000', 'Nenhuma');
+INSERT INTO `banco`.`usuario` (`usuario`, `senha`) VALUES ('admin', 'd033e22ae348aeb5660fc2140aec35850c4da997');

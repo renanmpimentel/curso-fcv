@@ -12,18 +12,18 @@
 
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li><a href="#">Inicial</a></li>
-                    <li><a href="#">Palestrante</a></li>
-                    <li><a href="#">Ouvinte</a></li>
+                    <li><a href="<?php echo base_url() ?>">Inicial</a></li>
+                    <li><a href="<?php echo base_url('palestrante_controller') ?>">Palestrante</a></li>
+                    <li><a href="<?php echo base_url('ouvinte_controller') ?>">Ouvinte</a></li>
                 </ul>
 
                 <ul class="nav pull-right">
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">[Nome Usuário]</a></li>
+                            <li><a href="#"><?php echo $this->session->userdata('usuario') ?></a></li>
                             <li class="divider"></li>
-                            <li><a href="#">Sair</a></li>
+                            <li><a href="<?php echo base_url('login_controller/sair') ?>">Sair</a></li>
                         </ul>
                     </li>
                 </ul>
